@@ -1,8 +1,8 @@
 /*
   Multiple Binary Generator
   @author: David Wright
-  @Date: 10/17/18
-  @version: .1
+  @Date: 10/23/18
+  @version: .2
  */
 import java.io.*;
 import java.util.*;
@@ -38,7 +38,7 @@ class main {
 
 	    Random rand = new Random();
 
-	    output = output + "input1, input2, output, logic\n";
+	    output = output + "input1, input2, logic, output\n";
 
 	    for(float i = 0; i < length; i++)
 		{
@@ -91,25 +91,25 @@ class Operators{
 
 	
 	
-	return String.valueOf(input1) + "," + String.valueOf(input2) + "," + String.valueOf(input1 & input2) + ",and\n"; 
+	return String.valueOf(input1) + "," + String.valueOf(input2) + ",and," + String.valueOf(input1 & input2) + "\n"; 
   
     }
 
     public String not(int input1){
 
-	return String.valueOf(input1) + ",-," + String.valueOf(~input1 + 2) + ",not\n"; 
+	return String.valueOf(input1) + ",,not," + String.valueOf(~input1 + 2) + "\n"; 
 
     }
 
     public String or(int input1, int input2){
 
-	return String.valueOf(input1) + "," + String.valueOf(input2) + "," + String.valueOf(input1 | input2) + ",or\n"; 
+	return String.valueOf(input1) + "," + String.valueOf(input2) + ",or," + String.valueOf(input1 | input2) + "\n"; 
 
     }
 
     public String xor(int input1, int input2){
 
-	return String.valueOf(input1) + "," + String.valueOf(input2) + "," + String.valueOf(input1 ^ input2) + ",xor\n"; 
+	return String.valueOf(input1) + "," + String.valueOf(input2) + ",xor," + String.valueOf(input1 ^ input2) + "\n"; 
 
     }
 
